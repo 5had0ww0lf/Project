@@ -22,7 +22,7 @@ describe ('Filling Form', function() {
 
         //Validar se login foi realizado com sucesso
         cy.get('[data-cy=appTitle] > a')
-        .should('be.visible')
+        .should('have.text', 'Test Automation')
     }
     )
 

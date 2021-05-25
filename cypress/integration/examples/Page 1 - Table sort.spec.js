@@ -22,7 +22,7 @@ describe ('Teste de Page 1', function() {
 
         //Validar se login foi realizado com sucesso
         cy.get('[data-cy=appTitle] > a')
-        .should('be.visible')
+        .should('have.text', 'Test Automation')
     }
     )
 
