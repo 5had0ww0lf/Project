@@ -23,8 +23,7 @@ describe ('Filling Form', function() {
         //Validar se login foi realizado com sucesso
         cy.get('[data-cy=appTitle] > a')
         .should('have.text', 'Test Automation')
-    }
-    )
+    })
 
     it('Visitar Page 2', function () {
         //Clicar na page 2
@@ -33,6 +32,13 @@ describe ('Filling Form', function() {
         //Validar se página 2 foi acessada
         cy.get(':nth-child(1) > .ant-col-4 > label')
         .should('be.visible')
+    })
+
+    it('Validar Campo Input', function () {
+        cy.get('.ant-input-affix-wrapper > .ant-input')
+        .type('@$!@$!')
+
+        cy.log('Campo permite caracteres especiais')  
     })
 
     it('Preencher Formulário', function () {
